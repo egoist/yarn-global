@@ -1,6 +1,10 @@
 'use strict'
 const path = require('path')
-const userHome = require('user-home')
+let userHome = require('user-home')
+
+if (process.platform === 'linux' && process.env.USER === 'root') {
+  userHome = path.resolve('/usr/local/share')
+}
 
 module.exports = function (dir) {
   let configDirectory
