@@ -654,15 +654,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-egoist@latest:
-  version "1.0.5"
-  resolved "http://registry.npm.taobao.org/eslint-config-egoist/download/eslint-config-egoist-1.0.5.tgz#b1e1560ff8387f4e01b4efc46a7421f28826fa2a"
-  dependencies:
-    eslint-config-xo "^0.16.0"
-
-eslint-config-xo@^0.16.0:
-  version "0.16.0"
-  resolved "http://registry.npm.taobao.org/eslint-config-xo/download/eslint-config-xo-0.16.0.tgz#c14190e3d9a54d47d3e72e43657ee361507b2a78"
+eslint-config-rem@latest:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/eslint-config-rem/download/eslint-config-rem-2.0.0.tgz#5b5dfd2682760ad7c536bd8178b6ea02070adea3"
 
 eslint@latest:
   version "3.10.2"
@@ -2374,7 +2368,7 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/uglify-to-browserify/download/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
-user-home, user-home@^2.0.0:
+user-home@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/user-home/download/user-home-2.0.0.tgz#9c70bfd8169bc1dcbf48604e0f04b8b49cde9e9f"
   dependencies:

@@ -23,14 +23,14 @@
   ],
   "devDependencies": {
     "eslint": "latest",
-    "eslint-config-egoist": "latest",
+    "eslint-config-rem": "latest",
     "jest-cli": "^15.1.1"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "eslintConfig": {
-    "extends": "egoist/esnext"
+    "extends": "rem/esnext"
   },
   "dependencies": {
     "user-home": "^2.0.0"
