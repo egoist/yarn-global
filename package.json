@@ -1,0 +1,38 @@
+{
+  "name": "installed-by-yarn-globally",
+  "version": "0.0.0",
+  "description": "Check if a directory lies in the directory for globally installed modules of Yarn.",
+  "license": "MIT",
+  "repository": "egoist/installed-by-yarn-globally",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "yarn"
+  ],
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-egoist": "latest",
+    "jest-cli": "^15.1.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "extends": "egoist/esnext"
+  },
+  "dependencies": {
+    "user-home": "^2.0.0"
+  }
+}
