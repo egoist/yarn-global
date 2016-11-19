@@ -12,7 +12,7 @@ module.exports = function (dir) {
   if (process.platform === 'win32' && process.env.LOCALAPPDATA) {
     configDirectory = path.join(process.env.LOCALAPPDATA, 'Yarn', 'config')
   }
-  // otherwise use ~/.yarn
+  // otherwise use ~/.config/yarn
   configDirectory = path.join(userHome, '.config', 'yarn')
 
   return dir.indexOf(path.join(configDirectory, 'global', 'node_modules')) !== -1
