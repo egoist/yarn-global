@@ -4,13 +4,6 @@ machine:
   node:
     version: 7
 
-test:
-  override:
-    - nvm use 4 && npm test
-    - nvm use 5 && npm test
-    - nvm use 6 && npm test
-    - nvm use 7 && npm test
-
 dependencies:
   pre:
     - curl -o- -L https://yarnpkg.com/install.sh | bash
