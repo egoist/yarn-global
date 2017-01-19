@@ -17,6 +17,17 @@ isGlobal(__dirname)
 //=> false
 ```
 
+## API
+
+### isGlobal(dir)
+
+#### dir
+
+Type: `string`<br>
+Default: `__dirname`
+
+The path to the module you wanna check, defaults to the path of this module.
+
 ## Contributing
 
 1. Fork it!

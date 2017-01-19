@@ -7,6 +7,7 @@ if (process.platform === 'linux' && isRootUser(getUid())) {
 }
 
 module.exports = function (dir) {
+  dir = dir || __dirname
   let configDirectory
   // use %LOCALAPPDATA%/Yarn on Windows
   if (process.platform === 'win32' && process.env.LOCALAPPDATA) {
