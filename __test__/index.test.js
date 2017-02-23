@@ -1,5 +1,6 @@
-const isGlobal = require('../')
+const yarnGlobal = require('../')
 
-test('main', () => {
-  expect(isGlobal(__dirname)).toBe(false)
+test('no', () => {
+  expect(yarnGlobal.inDirectory(__dirname))
+    .toBe(false)
 })

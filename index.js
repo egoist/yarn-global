@@ -1,4 +1,5 @@
 'use strict'
+const fs = require('fs')
 const path = require('path')
 let userHome = require('user-home')
 
@@ -6,8 +7,7 @@ if (process.platform === 'linux' && isRootUser(getUid())) {
   userHome = path.resolve('/usr/local/share')
 }
 
-module.exports = function (dir) {
-  dir = dir || __dirname
+function getDirectory() {
   let configDirectory
   // use %LOCALAPPDATA%/Yarn on Windows
   if (process.platform === 'win32' && process.env.LOCALAPPDATA) {
@@ -17,7 +17,31 @@ module.exports = function (dir) {
     configDirectory = path.join(userHome, '.config', 'yarn')
   }
 
-  return dir.indexOf(path.join(configDirectory, 'global', 'node_modules')) !== -1
+  return path.join(configDirectory, 'global', 'node_modules')
+}
+
+function inDirectory(dir) {
+  return dir.indexOf(getDirectory()) !== -1
+}
+
+function hasDependency(name) {
+  try {
+    const dir = getDirectory()
+    return Object
+      .keys(require(path.join(dir, '../', 'package.json')).dependencies)
+      .indexOf(name) !== -1
+  } catch (_) {
+    return false
+  }
+}
+
+function hasPackage(name) {
+  try {
+    const dir = getDirectory()
+    return fs.readdirSync(dir).indexOf(name) !== -1
+  } catch (_) {
+    return false
+  }
 }
 
 function getUid() {
@@ -30,3 +54,8 @@ function getUid() {
 function isRootUser(uid) {
   return uid === 0
 }
+
+module.exports.getDirectory = getDirectory
+module.exports.inDirectory = inDirectory
+module.exports.hasDependency = hasDependency
+module.exports.hasPackage = hasPackage

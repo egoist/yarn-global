@@ -1,32 +1,33 @@
-# installed-by-yarn-globally
+# yarn-global
 
-[![NPM version](https://img.shields.io/npm/v/installed-by-yarn-globally.svg?style=flat-square)](https://npmjs.com/package/installed-by-yarn-globally) [![NPM downloads](https://img.shields.io/npm/dm/installed-by-yarn-globally.svg?style=flat-square)](https://npmjs.com/package/installed-by-yarn-globally) [![Build Status](https://img.shields.io/circleci/project/egoist/installed-by-yarn-globally/master.svg?style=flat-square)](https://circleci.com/gh/egoist/installed-by-yarn-globally)
+[![NPM version](https://img.shields.io/npm/v/yarn-global.svg?style=flat-square)](https://npmjs.com/package/yarn-global) [![NPM downloads](https://img.shields.io/npm/dm/yarn-global.svg?style=flat-square)](https://npmjs.com/package/yarn-global) [![Build Status](https://img.shields.io/circleci/project/egoist/yarn-global/master.svg?style=flat-square)](https://circleci.com/gh/egoist/yarn-global)
 
 ## Install
 
 ```bash
-$ npm install --save installed-by-yarn-globally
+yarn add yarn-global
 ```
 
 ## Usage
 
 ```js
-const isGlobal = require('installed-by-yarn-globally')
+const yarnGlobal = require('yarn-global')
 
-isGlobal(__dirname)
-//=> false
+yarnGlobal.getDirectory()
+//=> /User/name/.config/yarn/global/node_modules
+
+yarnGlobal.inDirectory(process.cwd())
+// Check if a path is a child path of the value of `yarnGlobal.getDirectory()`
+
+yarnGlobal.hasDependency('create-react-app')
+// Check if you have installed it via `yarn global add`
+//=> true
+
+yarnGlobal.hasPackage('minimist')
+// Check if it's in `/User/name/.config/yarn/global/node_modules` directory
+// you may not install it by `yarn global add`
+//=> true
 ```
-
-## API
-
-### isGlobal(dir)
-
-#### dir
-
-Type: `string`<br>
-Default: `__dirname`
-
-The path to the module you wanna check, defaults to the path of this module.
 
 ## Contributing
 
