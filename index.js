@@ -37,8 +37,7 @@ function hasDependency(name) {
 
 function hasPackage(name) {
   try {
-    const dir = getDirectory()
-    return fs.readdirSync(dir).indexOf(name) !== -1
+    return fs.existsSync(path.join(getDirectory(), name))
   } catch (_) {
     return false
   }

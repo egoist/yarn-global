@@ -24,8 +24,8 @@ yarnGlobal.hasDependency('create-react-app')
 //=> true
 
 yarnGlobal.hasPackage('minimist')
-// Check if it's in `/User/name/.config/yarn/global/node_modules` directory
-// you may not install it by `yarn global add`
+// Check if `/User/name/.config/yarn/global/node_modules/minimist` exists
+// you may not have installed it by `yarn global add`
 //=> true
 ```
 
