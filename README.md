@@ -14,7 +14,7 @@ yarn add yarn-global
 const yarnGlobal = require('yarn-global')
 
 yarnGlobal.getDirectory()
-//=> /User/name/.config/yarn/global/node_modules
+//=> /Users/name/.config/yarn/global/node_modules
 
 yarnGlobal.inDirectory(process.cwd())
 // Check if a path is a child path of the value of `yarnGlobal.getDirectory()`
@@ -24,7 +24,7 @@ yarnGlobal.hasDependency('create-react-app')
 //=> true
 
 yarnGlobal.hasPackage('minimist')
-// Check if `/User/name/.config/yarn/global/node_modules/minimist` exists
+// Check if `/Users/name/.config/yarn/global/node_modules/minimist` exists
 // you may not have installed it by `yarn global add`
 //=> true
 ```
