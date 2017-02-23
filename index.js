@@ -24,15 +24,18 @@ function inDirectory(dir) {
   return dir.indexOf(getDirectory()) !== -1
 }
 
-function hasDependency(name) {
+function getDependencies() {
   try {
     const dir = getDirectory()
     return Object
       .keys(require(path.join(dir, '../', 'package.json')).dependencies)
-      .indexOf(name) !== -1
   } catch (_) {
-    return false
+    return []
   }
+}
+
+function hasDependency(name) {
+  return getDependencies().indexOf(name) !== -1
 }
 
 function hasPackage(name) {
@@ -56,5 +59,6 @@ function isRootUser(uid) {
 
 module.exports.getDirectory = getDirectory
 module.exports.inDirectory = inDirectory
+module.exports.getDependencies = getDependencies
 module.exports.hasDependency = hasDependency
 module.exports.hasPackage = hasPackage

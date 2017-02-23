@@ -19,6 +19,9 @@ yarnGlobal.getDirectory()
 yarnGlobal.inDirectory(process.cwd())
 // Check if a path is a child path of the value of `yarnGlobal.getDirectory()`
 
+yarnGlobal.getDependencies()
+// An array of denpendencies installed by `yarn global add`
+
 yarnGlobal.hasDependency('create-react-app')
 // Check if you have installed it via `yarn global add`
 //=> true
