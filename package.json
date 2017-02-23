@@ -1,7 +1,7 @@
 {
   "name": "yarn-global",
   "version": "1.0.0",
-  "description": "Check if a directory lies in the directory for globally installed modules of Yarn.",
+  "description": "A set of useful methods for @yarnpkg",
   "license": "MIT",
   "repository": "egoist/yarn-global",
   "author": {
