@@ -1,6 +1,6 @@
 {
   "name": "yarn-global",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of useful methods for @yarnpkg",
   "license": "MIT",
   "repository": "egoist/yarn-global",
