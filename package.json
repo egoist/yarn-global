@@ -31,8 +31,5 @@
   },
   "eslintConfig": {
     "extends": "rem/esnext"
-  },
-  "dependencies": {
-    "user-home": "^2.0.0"
   }
 }
