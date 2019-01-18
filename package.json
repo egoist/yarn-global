@@ -22,17 +22,14 @@
     "yarn"
   ],
   "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-rem": "latest",
-    "jest-cli": "^15.1.1"
+    "eslint": "5.12.0",
+    "eslint-config-rem": "2.0.0",
+    "jest-cli": "15.1.1"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "eslintConfig": {
     "extends": "rem/esnext"
-  },
-  "dependencies": {
-    "user-home": "^2.0.0"
   }
 }

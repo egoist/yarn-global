@@ -1,7 +1,7 @@
 'use strict'
 const fs = require('fs')
 const path = require('path')
-let userHome = require('user-home')
+let userHome = require('os').homedir()
 
 if (process.platform === 'linux' && isRootUser(getUid())) {
   userHome = path.resolve('/usr/local/share')
